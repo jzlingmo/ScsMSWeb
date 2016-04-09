@@ -1,0 +1,46 @@
+<!--process view-->
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3>文章列表<i class="fa fa-indent fa-fw"></i></h3>
+        <br>
+
+        <div class="form-horizontal">
+            <label>处理状态:</label>
+            <div class="btn-group btn-group-sm" ng-model="choosed.process" bs-radio-group>
+                <label ng-repeat="option in options.processed" class="btn btn-default">
+                    <input type="radio" value="{{option.value}}">{{option.label}}
+                </label>
+            </div>
+
+            &nbsp;
+            &nbsp;
+            <label>日期选择:</label>
+            <button bs-select type="button" class="btn btn-sm btn-default" data-animation=""
+                    ng-model="choosed.date"
+                    ng-options="date.value as date.label for date in options.dates" >
+                Choose date<span class="caret"></span>
+            </button>
+        </div>
+
+        <br>
+        <pre>choosed:{{choosed | json}}</pre>
+    </div>
+    <div class="panel-body">
+
+        <pre>Page and PageSize: {{ pagination }} </pre>
+
+        <table class="table table-bordered table-condensed">
+            <tr ng-repeat="article in articles">
+                <td> {{article.title}}</td>
+                <td> {{article.date | date}}</td>
+                <td> {{article.processed}} </td>
+            </tr>
+        </table>
+
+
+    </div>
+</div>
+</div>
+
+</div>

@@ -1,0 +1,27 @@
+{
+  "author": "Jet Zhou",
+  "name": "package-name",
+  "description": "Package description",
+  "version": "0.0.1",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": "~0.6.10 || 0.8 || 0.9"
+  },
+  "scripts": {
+    "start": "brunch watch --server"
+   },
+  "dependencies": {
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "less-brunch": ">= 1.0 < 1.8",
+
+    "auto-reload-brunch": ">= 1.0 < 1.8"
+
+  }
+}

@@ -1,0 +1,175 @@
+@import "vars";
+
+html, body {
+  font-family: "Microsoft Yahei";
+  //  background-color: @bg;
+  background-image: url("../img/gray_bg.png");
+}
+
+//a:hover, a:focus {
+//  color: #999999;
+//  cursor: pointer;
+//  text-decoration: none;
+//}
+
+//my directives
+area-chart {
+  display: block;
+  width: 101%;
+  height: 400px
+}
+
+#header {
+  color: white;
+  box-shadow: 0 0 2px 2px black;
+  height: @headerHeight;
+  background-color: @green3;
+  z-index: 10;
+  .navbar-brand {
+    font-family: cuisine;
+    font-size: 24px;
+  }
+
+  .logout {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    padding: 6px 10px;
+    background-color: #444;
+    opacity: 0.8;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 4px 1px #000;
+    color: #fff;
+  }
+
+}
+
+#menu {
+  position: fixed;
+  padding: 10px 0;
+  top: @paddingHeader;
+  bottom: 100px;
+  z-index: 10;
+  width: 70px;
+  min-height: 400px;
+  background-color: @menu_bg;
+  .shadow;
+  .round-right-corners(7);
+  .fa {
+    font-size: 38px;
+  }
+  a {
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    padding: 6px;
+    line-height: 12px;
+    .transition();
+  }
+  a:hover, a:focus {
+    color: #999999;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .active a {
+    color: @green3;
+    font-weight: bold;
+    background-color: #ffffff;
+  }
+}
+
+#loginPage {
+  padding-top: @paddingHeader;
+  form {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 30%;
+    min-width: 280px;
+    .round-corners(10);
+    //    .shadow(grey);
+    legend {
+      font-size: 19px;
+      padding-bottom: 8px;
+    }
+    .alert {
+      padding: 5px;
+      text-align: center;
+    }
+    input:not([type=submit]) {
+      height: 40px;
+      padding-left: 35px;
+    }
+    input[type=submit] {
+      color: #ffffff;
+      height: 42px;
+    }
+    .form-group {
+      position: relative;
+      .fa {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        color: @green3;
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+
+#mainPage {
+  padding-top: @paddingHeader;
+  padding-left: 0;
+  margin-left: 100px;
+}
+
+.panel {
+  min-height: 500px;
+  .panel-heading .fa {
+    font-size: 22px;
+    float: right;
+  }
+}
+
+#chartsPanel {
+  .option {
+    margin-bottom: 10px;
+  }
+}
+
+/* selection */
+::selection {
+  color: #ffffff;
+  background-color: @green2;
+}
+
+/* scrollbars */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 0px;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #eee;
+  -webkit-border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-color: #ccc;
+  -webkit-border-radius: 3px;
+}

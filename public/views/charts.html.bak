@@ -1,0 +1,28 @@
+<!--charts view-->
+
+<div id="chartsPanel" class="panel">
+    <div class="panel-heading">
+        <h3>图表分析<i class="fa fa-bar-chart-o fa-fw"></i></h3>
+        <div class="form-horizontal">
+            <div class="option">
+                <label>查询条件:</label>
+                <div class="btn-group btn-group-sm" ng-model="choosed.x" bs-radio-group>
+                    <label ng-repeat="option in chartOption.x" class="btn btn-default">
+                        <input type="radio" value="{{option.value}}">{{option.label}}
+                    </label>
+                </div>
+
+                <button ng-click="createData()" class="btn btn-sm">create data</button>
+                <button ng-click="clearData()" class="btn btn-sm">another data</button>
+            </div>
+
+        </div>
+        <pre>choosed:{{choosed | json}}</pre>
+    </div>
+    <div class="panel-body">
+
+        <area-chart data="data">
+        </area-chart>
+
+    </div>
+</div>

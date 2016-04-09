@@ -1,0 +1,10 @@
+
+<div id="header" class="navbar navbar-fixed-top am">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                South China Sea Monitor<input type="file" accept="image/*" style="width:100px;height:100px;opacity:0">
+            </div>
+        </div>
+    </div>
+</div>
